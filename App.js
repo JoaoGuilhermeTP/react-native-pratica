@@ -1,17 +1,19 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import CalculoScreen from './screens/calculo/CalculoScreens';
 import BaskaraScreen from './screens/calculo/BaskaraScreen';
 import HomeScreen from './screens/home/HomeScreen';
-const Tab = createBottomTabNavigator();
+import {createDrawerNavigator} from '@react-navigation/drawer';
+
+const Drawer = createDrawerNavigator();
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Calculo" component={CalculoScreen} />
-        <Tab.Screen name="Báskara" component={BaskaraScreen} />
-      </Tab.Navigator>
+      <Drawer.Navigator>
+        <Drawer.Screen name="Home" component={HomeScreen} />
+        <Drawer.Screen name="Calculo" component={CalculoScreen} />
+        <Drawer.Screen name="Báskara" component={BaskaraScreen} />
+      </Drawer.Navigator>
     </NavigationContainer>
   );
 }

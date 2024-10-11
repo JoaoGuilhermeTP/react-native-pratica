@@ -26,18 +26,6 @@ function BaskaraScreen() {
                 keyboardType="numeric"
             />
 
-            {/* <Picker
-                selectedValue={selectedValue}
-                style={styles.picker}
-                onValueChange={(itemValue, itemIndex) =>
-                    setSelectedValue(itemValue)}
-            >
-                <Picker.Item label="Somar" value="+" />
-                <Picker.Item label="Subtrair" value="-" />
-                <Picker.Item label="Multiplicar" value="*" />
-                <Picker.Item label="Dividir" value="/" />
-            </Picker> */}
-
             <TextInputBox
                 value={valueB}
                 onChangeText={setvalueB}
